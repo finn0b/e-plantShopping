@@ -246,7 +246,7 @@ const handlePlantsClick = (e) => {
     setShowCart(false); // Hide the cart when navigating to About Us
 };
 
-   const handleContinueShopping = (e) => {
+  const handleContinueShopping = (e) => {
     e.preventDefault();
     setShowCart(false);
   };
@@ -258,6 +258,10 @@ const handlePlantsClick = (e) => {
         [product.name]: true,
     }));
   };
+
+  const calculateTotalItems = () => {
+    
+  }
 
     return (
         <div>
@@ -283,7 +287,7 @@ const handlePlantsClick = (e) => {
         <div className="product-grid">
             {plantsArray.map((category, index) => (
                 <div key={index}>
-                    <h1><div>{category.category}</div></h1>
+                    <h1><div style={{textAlign: "center"}}>{category.category}</div></h1>
                     <div className="product-list">
                         {category.plants.map((plant, plantIndex) => (
                             <div className="product-card" key={plantIndex}>  
